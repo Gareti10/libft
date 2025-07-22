@@ -4,7 +4,6 @@ CFLAGS = -Wall -Wextra -Werror -I includes
 
 SRCS = 	ft_isalpha.c \
 
-
 OBJS = ft_isalpha.o
 
 all: $(NAME)
