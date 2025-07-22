@@ -6,7 +6,7 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 18:25:46 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/21 22:45:51 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/21 22:46:33 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c);
 
 #endif
