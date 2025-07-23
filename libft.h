@@ -6,7 +6,7 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 18:25:46 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/23 17:50:20 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/23 20:30:04 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
 
 #endif

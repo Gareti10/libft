@@ -6,7 +6,7 @@
 #    By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/23 17:43:22 by rgareti-          #+#    #+#              #
-#    Updated: 2025/07/23 18:06:01 by rgareti-         ###   ########.fr        #
+#    Updated: 2025/07/23 20:28:55 by rgareti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS = 			\
 	ft_strlen.c	\
 	ft_strchr.c\
 	ft_strrchr.c\
-	ft_strncmp.c			
+	ft_strncmp.c\
+	ft_strlcat.c
 
 OBJS = $(SRCS:.c=.o)
 
