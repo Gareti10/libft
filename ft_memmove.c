@@ -6,7 +6,7 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 20:31:23 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/25 18:17:11 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/25 18:49:58 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	if (dst == 0 && s == 0)
 		return (dest);
-	if (dst < src)
+	if (dst < s)
 	{
 		while (i < n)
 		{
@@ -35,6 +35,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n--)
 			dst[n] = s[n];
-	}
+	}															
 	return ((char *) dst);
 }
