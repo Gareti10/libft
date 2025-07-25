@@ -6,13 +6,13 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 19:52:09 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/23 20:14:30 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/25 18:12:05 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void *memmove(void *dest, const void *src, size_t n)
 {
 	
 }

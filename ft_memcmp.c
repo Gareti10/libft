@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 20:32:16 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/24 21:14:45 by gareti           ###   ########.fr       */
+/*   Updated: 2025/07/25 17:47:50 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (str1[i] != str2[i])
-			return(str1[i] - str2[i]);
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (0);

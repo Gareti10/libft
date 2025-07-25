@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 20:32:35 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/25 11:41:53 by gareti           ###   ########.fr       */
+/*   Updated: 2025/07/25 17:38:33 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
@@ -22,7 +22,7 @@ void    *ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
-		return(NULL);
+		return (NULL);
 	ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }

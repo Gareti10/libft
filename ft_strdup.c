@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 20:32:52 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/25 11:54:36 by gareti           ###   ########.fr       */
+/*   Updated: 2025/07/25 17:54:01 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char	*ptr;
+	char		*ptr;
 	size_t		len;
 	size_t		i;
 
