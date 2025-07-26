@@ -6,7 +6,7 @@
 #    By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/23 17:43:22 by rgareti-          #+#    #+#              #
-#    Updated: 2025/07/25 19:12:14 by rgareti-         ###   ########.fr        #
+#    Updated: 2025/07/26 18:58:22 by rgareti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,9 @@ SRCS = 			\
 	ft_memmove.c\
 	ft_memset.c\
 	ft_strdup.c\
-	ft_memcpy.c
-
+	ft_memcpy.c\
+	*ft_substr.c
+	
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
