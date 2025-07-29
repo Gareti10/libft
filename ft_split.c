@@ -6,7 +6,7 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 18:19:27 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/28 19:23:16 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/28 21:24:26 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,40 @@ int	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+int	ft_save_word(const char *s, char c, char **res, int *word_index)
 {
-	int		i;
-	int		start;
-	int		word_index;
-	char	**res;
+	int	start;
+	int	i;
 
 	i = 0;
+	while (s[i] == c)
+		i++;
+	start = i;
+	while (s[i] != c && s[i])
+		i++;
+	if (i > start)
+	{
+		res[*word_index] = ft_substr(s, start, i - start);
+		if (!res[*word_index])
+		{
+			while (*word_index)
+				free(res[--(*word_index)]);
+			return (-1);
+		}
+		(*word_index)++;
+	}
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		off_set;
+	int		word_index;
+	char	**res;
+	int		i;
+
 	word_index = 0;
+	i = 0;
 	if (!s)
 		return (NULL);
 	res = ft_calloc(ft_countwords(s, c) + 1, sizeof(char *));
@@ -44,23 +69,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		start = i;
-		while (s[i] != c && s[i])
-			i++;
-		if (i > start)
+		off_set = ft_save_word(&s[i], c, res, &word_index);
+		if (off_set == -1)
 		{
-			res[word_index] = ft_substr(s, start, i - start);
-			if (!res[word_index])
-			{
-				while (word_index--)
-					free(res[word_index]);
-				free (res);
-				return (NULL);
-			}
-			word_index++;
+			free (res);
+			return (NULL);
 		}
+		i += off_set;
 	}
 	return (res);
 }
