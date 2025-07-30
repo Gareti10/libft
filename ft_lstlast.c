@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 17:51:38 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/30 19:14:04 by rgareti-         ###   ########.fr       */
+/*   Created: 2025/07/30 19:33:17 by rgareti-          #+#    #+#             */
+/*   Updated: 2025/07/30 20:10:48 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-	size_t	dst_len;
-	size_t	src_len;
-
-	i = 0;
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if (dsize <= dst_len)
-		return (dsize + src_len);
-	while (((dst_len + i) < (dsize - 1)) && src[i])
-	{	
-		dst[dst_len + i] = src[i];
-		i++;
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	return (lst);
 }

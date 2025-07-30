@@ -6,7 +6,7 @@
 #    By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/23 17:43:22 by rgareti-          #+#    #+#              #
-#    Updated: 2025/07/28 21:46:32 by rgareti-         ###   ########.fr        #
+#    Updated: 2025/07/30 18:04:43 by rgareti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,9 +42,28 @@ SRCS = 			\
 	ft_strjoin.c\
 	ft_strtrim.c\
 	ft_split.c\
-	ft_itoa.c
+	ft_itoa.c\
+	ft_strmapi.c\
+	ft_striteri.c\
+	ft_putchar_fd.c\
+	ft_putstr_fd.c\
+	ft_putendl_fd.c\
+	ft_putnbr_fd.c
 	
 OBJS = $(SRCS:.c=.o)
+
+BONUS_SRC = $(addsuffix _bonus.c, \
+	ft_lstnew \
+	ft_lstadd_front \
+	ft_lstsize \
+	ft_lstlast \
+	ft_lstadd_back \
+	ft_lstdelone \
+	ft_lstclear \
+	ft_lstiter \
+	ft_lstmap)
+
+BONUS_OBJS := $(BONUS_SRC:%.c=%.o)
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 21:47:36 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/07/28 22:23:03 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/07/30 14:58:06 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int	ft_countdigits(int n)
 	count = 1;
 	if (n < 0)
 		count++;
-	while (n > 9)
+	while (n > 9 || n < -9)
+	{
 		count++;
 		n = n / 10;
+	}
 	return (count);
 }
 
@@ -42,14 +44,14 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		number[count--] = '-';
+		number[0] = '-';
 	}
-	while (n > 9)
+	number[count--] = '\0';
+	while (aux > 9)
 	{
-		number[count--] = (n % 10) + '0';
-		n = n / 10;
+		number[count--] = (aux % 10) + '0';
+		aux /= 10;
 	}
-	number[count] = n + '0';
-	number[--i] = '\0';
+	number[count] = aux + '0';
 	return (number);
 }
