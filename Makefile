@@ -6,7 +6,7 @@
 #    By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/23 17:43:22 by rgareti-          #+#    #+#              #
-#    Updated: 2025/07/30 18:04:43 by rgareti-         ###   ########.fr        #
+#    Updated: 2025/08/01 16:54:08 by rgareti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,12 +69,16 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	
+bonus:
+	@$(MAKE) OBJS="$(OBJS) $(BONUS_OBJS)"
+
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
